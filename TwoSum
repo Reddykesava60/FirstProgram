@@ -1,0 +1,24 @@
+  vector<int> twoSum(vector<int>& nums, int target) {
+
+        int st = 0, end = nums.size() - 1;
+        vector<pair<int, int>> res;
+        vector<int> ans;
+
+        for (int i = 0; i < nums.size(); i++) {
+            res.push_back({nums[i], i});
+        }
+
+        sort(res.begin(), res.end());
+        while (st < end) {
+            if (res[st].first + res[end].first == target) {
+                ans.push_back(res[st].second);
+                ans.push_back(res[end].second);
+                break;
+            } else if (res[st].first + res[end].first < target) {
+                st++;
+            } else {
+                end--;
+            }
+        }
+        return ans;
+    }
