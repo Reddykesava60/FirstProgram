@@ -69,7 +69,6 @@ class linkedlist
 
 // linkedlist list1;
 
-
 // list1.insertAtbegin(4);
 // list1.insertAtbegin(9);
 // list1.insertAtbegin(4);
